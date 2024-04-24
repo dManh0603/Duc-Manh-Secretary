@@ -21,6 +21,10 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 8080
 
+app.get('/', (req, res) => {
+  res.json("hello world");
+})
+
 app.listen(PORT, () => {
   console.log('Server is running');
   console.log('On local: ' + chalk.blue(`127.0.0.1:${PORT}`))
