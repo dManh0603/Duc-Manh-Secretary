@@ -31,3 +31,4 @@ app.listen(PORT, () => {
   console.log('On your network: ' + chalk.blue(`${ip.address()}:${PORT}`))
 })
 
+module.exports = app;
