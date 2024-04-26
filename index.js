@@ -25,6 +25,10 @@ app.get('/', (req, res) => {
   res.json("hello world");
 })
 
+app.get('/hello world', (req, res) => {
+  res.json("hello world you too");
+})
+
 app.listen(PORT, () => {
   console.log('Server is running');
   console.log('On local: ' + chalk.blue(`127.0.0.1:${PORT}`))
