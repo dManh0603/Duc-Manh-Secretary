@@ -31,4 +31,4 @@ app.listen(PORT, () => {
   console.log('On your network: ' + chalk.blue(`${ip.address()}:${PORT}`))
 })
 
-module.express = app;
+module.exports = app;

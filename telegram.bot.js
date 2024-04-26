@@ -22,9 +22,11 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 // messages.
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
-
+  console.log("get message from:"+chatId)
   // send a message to the chat acknowledging receipt of their message
   bot.sendMessage(chatId, 'Received your message');
+  console.log("sent message to:"+chatId)
+
 });
 
 module.exports = bot;
