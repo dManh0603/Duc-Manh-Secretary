@@ -9,6 +9,7 @@ const bodyParser = require('body-parser')
 const app = express()
 
 const TELEGRAM_BOT = require('./telegram.bot')
+const logger = require('./logger')
 
 // Set the "public" folder as the static directory
 app.use(express.static(path.join(__dirname, 'public')));

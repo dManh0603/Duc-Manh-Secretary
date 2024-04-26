@@ -1,4 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api');
+const logger = require('./logger')
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 
@@ -22,9 +23,11 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 // messages.
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
-  
+  logger.info("get message from:" + chatId)
+
   // send a message to the chat acknowledging receipt of their message
   bot.sendMessage(chatId, 'Received your message');
+  logger.info("responsed to" + chatId)
 });
 
 module.exports = bot;
