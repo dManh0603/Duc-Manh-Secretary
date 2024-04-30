@@ -2,8 +2,9 @@ const TelegramBot = require('node-telegram-bot-api');
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 
-// Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, { polling: true });
+
+bot.setWebHook('https://duc-manh-secretary.vercel.app/api/telegram-bot');
 
 // Matches "/echo [whatever]"
 bot.onText(/\/echo (.+)/, (msg, match) => {
@@ -22,10 +23,10 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 // messages.
 bot.on('message', (msg) => {
   const chatId = msg.chat.id;
-  console.log("get message from:"+chatId)
+  console.log("get message from:" + chatId)
   // send a message to the chat acknowledging receipt of their message
   bot.sendMessage(chatId, 'Received your message');
-  console.log("sent message to:"+chatId)
+  console.log("sent message to:" + chatId)
 
 });
 
