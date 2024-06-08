@@ -18,6 +18,7 @@
     "winston": "^3.13.0"
   },
   "devDependencies": {
+    "ip": "^2.0.1",
     "nodemon": "^3.1.0"
   }
 }

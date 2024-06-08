@@ -46,7 +46,7 @@ function sendWeatherReport() {
 }
 
 // Schedule the task to send message at 6 am every day
-cron.schedule('0 20 * * *', () => {
+cron.schedule('25 10 * * *', () => {
   sendWeatherReport();
 });
 
